@@ -638,9 +638,9 @@ F 3 "" H 8000 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 8450 1100 2    50   BiDi ~ 0
-USB_DM
+USB_D-
 Text GLabel 8450 1000 2    50   BiDi ~ 0
-USB_DP
+USB_D+
 Wire Wire Line
 	8450 1000 8150 1000
 $Comp
@@ -680,9 +680,9 @@ Wire Wire Line
 Text Label 4400 4400 0    50   ~ 0
 OTG_FS_DP
 Text GLabel 5650 4400 2    50   BiDi ~ 0
-USB_DP
+USB_D+
 Text GLabel 5650 4300 2    50   BiDi ~ 0
-USB_DM
+USB_D-
 $Comp
 L Regulator_Linear:L78L33_SOT89 U3
 U 1 1 5C46057F
@@ -1889,7 +1889,6 @@ Wire Wire Line
 	6200 2500 5800 2500
 Connection ~ 5800 2500
 NoConn ~ 2900 5600
-NoConn ~ 8400 5400
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 5D05AF46
@@ -2836,4 +2835,55 @@ Wire Wire Line
 	4300 6300 5150 6300
 Text GLabel 4300 3500 2    50   Output ~ 0
 LED7
+$Comp
+L Connector:TestPoint TP32
+U 1 1 5C479A42
+P 8250 6100
+F 0 "TP32" H 8308 6220 50  0000 L CNN
+F 1 "CLKOUT" H 8308 6129 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 8450 6100 50  0001 C CNN
+F 3 "~" H 8450 6100 50  0001 C CNN
+	1    8250 6100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8400 5400 8250 5400
+Wire Wire Line
+	8250 5400 8250 6100
+NoConn ~ 2900 6400
+NoConn ~ 2900 6300
+NoConn ~ 2900 6200
+NoConn ~ 2900 6100
+NoConn ~ 2900 6000
+NoConn ~ 2900 5900
+NoConn ~ 2900 5800
+NoConn ~ 2900 5700
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5C5619AE
+P 10100 2800
+F 0 "#FLG0103" H 10100 2875 50  0001 C CNN
+F 1 "PWR_FLAG" H 10100 2974 50  0000 C CNN
+F 2 "" H 10100 2800 50  0001 C CNN
+F 3 "~" H 10100 2800 50  0001 C CNN
+	1    10100 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 2800 10100 2900
+Connection ~ 10100 2900
+$Comp
+L power:PWR_FLAG #FLG0109
+U 1 1 5C57919F
+P 9750 3200
+F 0 "#FLG0109" H 9750 3275 50  0001 C CNN
+F 1 "PWR_FLAG" H 9750 3374 50  0000 C CNN
+F 2 "" H 9750 3200 50  0001 C CNN
+F 3 "~" H 9750 3200 50  0001 C CNN
+	1    9750 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9750 3200 9750 3300
+Connection ~ 9750 3300
 $EndSCHEMATC
